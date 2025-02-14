@@ -1,0 +1,387 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Didact Gothic', serif;
+    /* font-family: Arial, sans-serif; */
+    box-sizing: border-box;
+    /* background: linear-gradient(135deg, #fefef6, #fbfff4, #fffff9, #fff9ef, #fef6f5, #f8f8f0); */
+    /*009 Frozen Dreams*/
+    background-image: linear-gradient(135deg, #f3d2eb 0%, #f4e3f0 1%, #e6dee9 100%);
+    animation: gradient-animation 7s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: white;
+    position: fixed; /* Change to fixed to always float on top */
+    top: 0;
+    width: calc(100% - 35px); /* Adjust width to account for scrollbar */
+    z-index: 1000;
+    border-radius: 0 0 20px 20px;
+}
+.navbar .branding {
+    text-shadow: 1px 1px 5px white;
+    font-family: 'Tilt Warp', 'serif';
+    display: flex;
+    align-items: center;
+}
+
+.brand-name{
+    font-weight: bolder;
+    font-size: x-large;
+    color: black;
+}
+
+.branding-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Keeps the default text color */
+    cursor: pointer; /* Ensures it's clickable */
+}
+
+.branding-link:visited,
+.branding-link:hover,
+.branding-link:active {
+    color: inherit; /* Prevents color change on hover/click */
+    text-decoration: none; /* No underline on hover */
+}
+
+.navbar .logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.navbar .menu {
+    text-shadow: 1px 1px 5px white;
+    font-family: 'Spectral', 'serif';
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding-right: 25px;
+}
+.navbar .menu li a {
+    text-decoration: none;
+    color: black; /* Initial text color */
+    font-weight: bold;
+    background-color: transparent; /* No background initially */
+    padding: 10px;
+    font-size: 19px;
+    /* transition: color 0.3s, background-color 0.3s, border 0.3s; */
+}
+.navbar .menu li a:hover {
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 40px;
+    text-shadow: none;
+}
+
+/* project cards */
+.container {
+    margin: 50px;
+    margin-top: 100px;
+    width: 90%;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.row h2 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.card-groups {
+    display: flex;
+    gap: 300px; /* Adjust spacing between groups */
+    perspective: 7000px; /* Adds depth to the flip effect */
+}
+
+.card-container {
+    position: relative;
+    width: 200px; /* Adjust based on design */
+    height: 170px;
+    display: flex;
+}
+
+/* Adjust card size for tablets */
+@media (max-width: 1024px) {
+    .card-container {
+        width: 150px;
+        height: 130px;
+    }
+    .card {
+        width: 150px;
+        height: 130px;
+    }
+    .card img {
+        width: 150px;
+        height: 130px;
+    }
+}
+
+/* Adjust card size for mobile screens */
+@media (max-width: 768px) {
+    .card-container {
+        width: 120px;
+        height: 100px;
+    }
+    .card {
+        width: 120px;
+        height: 100px;
+    }
+    .card img {
+        width: 120px;
+        height: 100px;
+    }
+    .card-groups {
+        flex-direction: column; /* Stack groups vertically on small screens */
+        gap: 20px;
+    }
+}
+
+.card {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    background: white;
+    padding: 0;
+    border-radius: 20px;
+    text-align: center;
+    align-content: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    overflow: hidden; /* Ensure the image doesn't overflow */
+
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the card without distortion */
+    border-radius: 10px; /* Matches the card's border-radius */
+}
+
+/* Stacking order */
+.card:nth-child(1) { left: 0; z-index: 4; transform: rotateY(-8deg);}
+.card:nth-child(2) { left: 45px; z-index: 3; transform: rotateY(-6deg);}
+.card:nth-child(3) { left: 90px; z-index: 2; transform: rotateY(-4deg);}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Apply flip effect to the entire group on hover */
+.card-container:hover {
+    transform: rotateY(20deg); /* Slight 3D tilt */
+}
+
+/* Add a slight flip to each card when the group is hovered */
+.card-container:hover .card:nth-child(1) { transform: rotateY(50deg) translateX(5px); }
+.card-container:hover .card:nth-child(2) { transform: rotateY(40deg) translateX(5px); }
+.card-container:hover .card:nth-child(3) { transform: rotateY(20deg) translateX(5px); }
+.card-container:hover .card:nth-child(4) { transform: rotateY(10deg) translateX(5px); }
+
+/* Modal Overlay Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Modal Content (Scrollable) */
+.modal-content {
+    background: white;
+    height: 80%;
+    width: 77%;
+    /* max-width: 900px; */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Scrollable content */
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: none;
+}
+
+/* Grid Layout for Cards Inside Modal */
+.modal-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Cards Inside Modal */
+.modal-card {
+    margin: 10px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    text-decoration: none;
+    color: black;
+}
+
+.modal-card:hover {
+    transform: scale(1.05);
+}
+
+/* Video Thumbnails */
+.video-thumbnail {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.video-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.video-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 5px 5px;
+}
+
+.video-description {
+    font-size: 14px;
+    color: #555;
+    padding: 0 10px;
+    max-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        height: 80%;
+    }
+    .modal-card-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+
+/* Floating Social Icons */
+.floating-social-container {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+.floating-social-container .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-family: "Font Awesome 5 Free";
+    font-size: 18px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+.floating-social-container .social-icon:hover {
+    transform: scale(1.5);
+}
+
+/* Footer Styles */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.email-subscription {
+    margin-bottom: 10px;
+}
+
+.email-subscription input {
+    padding: 10px;
+    width: 60%;
+    border: none;
+    border-radius: 40px;
+}
+
+.email-subscription button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00aced;
+    color: white;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.email-subscription button:hover {
+    background-color: #007bb5;
+}

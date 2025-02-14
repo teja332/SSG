@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Link Submission</title>
+    <link rel="stylesheet" href="/user_control/projects/add_projects.css">
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact Gothic|Wendy One|Tilt Warp|Spectral">
+    <script defer src="/user_control/projects/add_projects.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-center">
+            <a href="/user_control/home/home.html" class="logo-container">
+                <lord-icon trigger="hover" src="/assets/icons/logo.json" alt="Logo" class="logo"></lord-icon>
+                <span class="brand-name" style="font-size: 30px;">SHAKTHI <BR>SHREE GOPALAN</span>
+            </a>
+        </div>
+        <ul class="menu">
+            <button class="events" onclick="events()">Events</button>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Submit YouTube Links</h2>
+        
+        <form id="youtubeForm">
+            <div class="input-group">
+                <label for="youtubeLink">YouTube Link</label>
+                <input type="url" id="youtubeLink" name="youtubeLink" placeholder="Enter YouTube link..." required>
+            </div>
+
+            <div class="radio-group">
+                <label>Select a Row:</label>
+                <div class="radio-options">
+                    <label><input type="radio" name="row" value="row1" required> Row 1</label>
+                    <label><input type="radio" name="row" value="row2"> Row 2</label>
+                    <label><input type="radio" name="row" value="row3"> Row 3</label>
+                    <label><input type="radio" name="row" value="row4"> Row 4</label>
+                    <label><input type="radio" name="row" value="row5"> Row 5</label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

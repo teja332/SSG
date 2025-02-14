@@ -1,0 +1,295 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Didact Gothic', serif;
+    /* font-family: Arial, sans-serif; */
+    box-sizing: border-box;
+    /* background: linear-gradient(135deg, #fefef6, #fbfff4, #fffff9, #fff9ef, #fef6f5, #f8f8f0); */
+    /*009 Frozen Dreams*/
+    /* background-image: linear-gradient(135deg, #f3d2eb 0%, #f4e3f0 1%, #e6dee9 100%); */
+    /* animation: gradient-animation 6.5s ease infinite;
+    background-size: 400% 400%; */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/assets/images/event.webp') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(2px); /* Adjust the blur intensity */
+    z-index: -1; /* Ensures it stays behind all content */
+}
+
+/* 
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: white;
+    position: fixed; /* Change to fixed to always float on top */
+    top: 0;
+    width: calc(100% - 35px); /* Adjust width to account for scrollbar */
+    z-index: 1000;
+    border-radius: 0 0 20px 20px;
+}
+.navbar .branding {
+    text-shadow: 1px 1px 5px white;
+    font-family: 'Tilt Warp', 'serif';
+    display: flex;
+    align-items: center;
+}
+
+.brand-name{
+    font-weight: bolder;
+    font-size: x-large;
+    color: black;
+}
+
+.branding-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Keeps the default text color */
+    cursor: pointer; /* Ensures it's clickable */
+}
+
+.branding-link:visited,
+.branding-link:hover,
+.branding-link:active {
+    color: inherit; /* Prevents color change on hover/click */
+    text-decoration: none; /* No underline on hover */
+}
+
+.navbar .logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.navbar .menu {
+    text-shadow: 1px 1px 5px white;
+    font-family: 'Spectral', 'serif';
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding-right: 25px;
+}
+.navbar .menu li a {
+    text-decoration: none;
+    color: black; /* Initial text color */
+    font-weight: bold;
+    background-color: transparent; /* No background initially */
+    padding: 10px;
+    font-size: 19px;
+    /* transition: color 0.3s, background-color 0.3s, border 0.3s; */
+}
+.navbar .menu li a:hover {
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 40px;
+    text-shadow: none;
+}
+
+main{
+    margin-top: 100px;
+}
+
+/* cards showing on the webpage */
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    padding-right: 44px;
+    margin-top: 120px; /* To account for fixed navbar */
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 400px;
+    height: 250px;
+    perspective: 1000px;
+    position: relative;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: rotateY(0);
+    transition: transform 0.6s ease;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 0.3s;
+    border-radius: 15px;
+}
+
+.card:active{
+    box-shadow: none;
+    transform: translateY(10px);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background: #fff;
+}
+
+.card-front {
+    background: #f9f9f9;
+}
+
+.card-back {
+    background: #e0e0e0;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.card-back p{
+    padding: 0 25px;
+}
+
+.card:hover .card-front {
+    background-color: #e8f5e9;
+}
+
+.card:hover .card-back {
+    background-color: #c8e6c9;
+}
+
+.card:active .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* button with click effect */
+.button{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.btn {
+    border: none;
+    text-align: center;
+    padding: 12px 40px;
+    font-size: 16px;
+    background-color: green;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+    outline: none;
+    transition: 0.1s all;
+}
+
+/* Adding transformation when the button is active */
+.btn:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
+
+/* Floating Social Icons */
+.floating-social-container {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+.floating-social-container .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-family: "Font Awesome 5 Free";
+    font-size: 18px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+.floating-social-container .social-icon:hover {
+    transform: scale(1.5);
+}
+
+/* Footer Styles */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.email-subscription {
+    margin-bottom: 10px;
+}
+
+.email-subscription input {
+    padding: 10px;
+    width: 60%;
+    border: none;
+    border-radius: 40px;
+}
+
+.email-subscription button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00aced;
+    color: white;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.email-subscription button:hover {
+    background-color: #007bb5;
+}

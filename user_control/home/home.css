@@ -1,0 +1,152 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Didact Gothic', serif;
+    /* font-family: Arial, sans-serif; */
+    /* height: 100vh; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background Image */
+.back-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Centering Logo & Heading */
+.nav-center {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    width: 50px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-family: 'Tilt Warp', 'serif';
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Logout Button */
+.menu {
+    margin-left: auto; /* Pushes logout button to the right */
+}
+
+.logout-btn {
+    padding: 10px 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-right: 20px;
+}
+
+.logout-btn:hover {
+    background-color: darkred;
+}
+
+/* Main Containers */
+.main-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    width: 100%;
+    height: 80%;
+    gap: 80px;
+    left: 0;
+    padding: 20px;
+    margin: 20px;
+}
+
+.welcome-container {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    height: 70%;
+    align-content: center;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    gap: 55px;
+    width: 70%;
+    height: 100%;
+    align-content: center;
+}
+
+.card {
+    background: white;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+    align-content: center;
+    border-radius: 32px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s;
+    height: 25%;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}

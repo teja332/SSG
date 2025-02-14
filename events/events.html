@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/assets/icons/instagram.png">
+    <title>EVENTS</title>
+    <link rel="stylesheet" href="/events/events.css" />
+    <script defer src="/events/events.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact Gothic|Wendy One|Tilt Warp|Spectral">
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  </head>
+
+  <body>
+    <!-- Navbar Section -->
+    <header>
+      <nav class="navbar">
+        <div class="branding">
+          <a href="/index.html" class="branding-link">
+              <img class="logo" src="/assets/icons/logo.png" alt="logo">
+              <span class="brand-name" style="font-size: 30px;">SHAKTHISREE <BR> GOPALAN</span>
+              </a>
+      </div>
+        <ul class="menu">
+          <li><a href="/about/about.html">About</a></li>
+          <li><a href="/events/events.html">Events</a></li>
+          <li><a href="/projects/projects.html">Projects</a></li>
+          <li><a href="/connect/connect.html">Connect</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- cards showing on the webpage -->
+    <main class="cards-container">
+      <div class="card" onclick="toggleFlip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Card 1</h3>
+            <p>Some brief content here.</p>
+            <h4>Overview</h4>
+          </div>
+          <div class="card-back">
+            <h3>Details 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+              ipsam reiciendis ut doloribusillo eveniet asperiores. Omnis
+              corporis odio ipsa dolorum soluta error dolor quibusdam
+              consequatur, magnam nesciunt totam quas?
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="toggleFlip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Card 2</h3>
+            <p>Some brief content here.</p>
+            <h4>Overview</h4>
+          </div>
+          <div class="card-back">
+            <h3>Details 2</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+              ipsam reiciendis ut doloribus illo eveniet asperiores. Omnis
+              corporis odio ipsa dolorum soluta error dolor quibusdam
+              consequatur, magnam nesciunt totam quas?
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="toggleFlip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Card 3</h3>
+            <p>Some brief content here.</p>
+            <h4>Overview</h4>
+          </div>
+          <div class="card-back">
+            <h3>Details 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+              ipsam reiciendis ut doloribus illo eveniet asperiores. Omnis
+              corporis odio ipsa dolorum soluta error dolor quibusdam
+              consequatur, magnam nesciunt totam quas?
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="toggleFlip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Card 4</h3>
+            <p>Some brief content here.</p>
+            <h4>Overview</h4>
+          </div>
+          <div class="card-back">
+            <h3>Details 4</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+              ipsam reiciendis ut doloribus illo eveniet asperiores. Omnis
+              corporis odio ipsa dolorum soluta error dolor quibusdam
+              consequatur, magnam nesciunt totam quas?
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="toggleFlip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Card 5</h3>
+            <p>Some brief content here.</p>
+            <h4>Overview</h4>
+          </div>
+          <div class="card-back">
+            <h3>Details 5</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+              ipsam reiciendis ut doloribus illo eveniet asperiores. Omnis
+              corporis odio ipsa dolorum soluta error dolor quibusdam
+              consequatur, magnam nesciunt totam quas?
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="button">
+      <a href="#"><button class="btn">Book Now</button></a>
+    </div>
+
+    <!-- Floating Social Icons -->
+    <div class="floating-social-container">
+      <a
+        href="https://facebook.com"
+        target="_blank"
+        class="social-icon facebook"
+      >
+        <lord-icon
+          trigger="hover"
+          src="/assets/icons/facebook-icon.json"
+        ></lord-icon>
+      </a>
+      <a href="https://x.com" target="_blank" class="social-icon twitter">
+        <lord-icon
+          trigger="hover"
+          src="/assets/icons/twitter-icon.json"
+        ></lord-icon>
+      </a>
+      <a
+        href="https://instagram.com"
+        target="_blank"
+        class="social-icon instagram"
+      >
+        <lord-icon
+          trigger="hover"
+          src="/assets/icons/instagram-icon.json"
+        ></lord-icon>
+      </a>
+      <a href="https://youtube.com" target="_blank" class="social-icon youtube">
+        <lord-icon
+          trigger="hover"
+          src="/assets/icons/youtube-icon.json"
+        ></lord-icon>
+      </a>
+      <a href="https://spotify.com" target="_blank" class="social-icon spotify">
+        <lord-icon trigger="hover" src="/assets/icons/spotify.json"></lord-icon>
+      </a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <form class="email-subscription">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">Connect</button>
+        </form>
+        <p>© 2025 Company Name. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

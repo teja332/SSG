@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/icons/instagram.png">
+    <title>Home</title>
+    <link rel="stylesheet" href="/user_control/home/home.css">
+    <script defer src="/user_control/home/home.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact Gothic|Wendy One|Tilt Warp|Spectral">
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+</head>
+<body>
+    <img class="back-img" src="/assets/images/wallhaven-wegzl7.png" alt="background-image">
+    <nav class="navbar">
+        <div class="nav-center">
+            <a href="/user_control/home/home.html" class="logo-container">
+                <lord-icon trigger="hover" src="/assets/icons/logo.json" alt="Logo" class="logo"></lord-icon>
+                <span class="brand-name" style="font-size: 30px;">SHAKTHI <BR>SHREE GOPALAN</span>
+            </a>
+        </div>
+        <ul class="menu">
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <div class="welcome-container">
+            <h1>Welcome to the Home Page</h1>
+        </div>
+        <div class="cards-container">
+            <div class="card" onclick="projects()">Projects</div>
+            <div class="card" onclick="events()">Events</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,278 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Didact Gothic', serif;
+    /* font-family: Arial, sans-serif; */
+    box-sizing: border-box;
+    /* background: linear-gradient(135deg, #fefef6, #fbfff4, #fffff9, #fff9ef, #fef6f5, #f8f8f0); */
+    /*009 Frozen Dreams*/
+    background-image: linear-gradient(135deg, #f3d2eb 0%, #f4e3f0 1%, #e6dee9 100%);
+    animation: gradient-animation 7s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: fixed;
+    top: 0;
+    width: calc(100% - 35px);
+    z-index: 1000;
+    border-radius: 0 0 20px 20px;
+}
+
+.navbar .branding {
+    text-shadow: 1px 1px 5px white;
+    font-family: 'Tilt Warp', 'serif';
+    display: flex;
+    align-items: center;
+}
+
+.brand-name {
+    font-weight: bolder;
+    font-size: x-large;
+    color: black;
+}
+
+.branding-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Keeps the default text color */
+    cursor: pointer; /* Ensures it's clickable */
+}
+
+.branding-link:visited,
+.branding-link:hover,
+.branding-link:active {
+    color: inherit; /* Prevents color change on hover/click */
+    text-decoration: none; /* No underline on hover */
+}
+
+.navbar .logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.navbar .menu {
+    text-shadow: 1px 1px 5px white;
+    font-family: 'Spectral', 'serif';
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding-right: 25px;
+}
+
+.navbar .menu li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 19px;
+    /* transition: color 0.3s, background-color 0.3s, border 0.3s; */
+}
+
+.navbar .menu li a:hover {
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 40px;
+    text-shadow: none;
+}
+
+/* Contact & Connect Form */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 120px auto;
+    width: 80%;
+    height: 500px;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Form Section */
+.form-container {
+    width: 50%;
+    height: 70%;
+}
+
+/* .buttons {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    transition: background 0.3s;
+}
+
+.buttons button.active {
+    background-color: #0056b3;
+} */
+
+.form {
+    width: 100%;
+}
+
+.form h2 {
+    margin-bottom: 20px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form input, .form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    resize: none;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form button:hover {
+    background-color: #218838;
+}
+
+/* Right Side - Image Section */
+.image-container {
+    width: 45%;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+/* Contribute Button on Image */
+.toggle-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    pointer-events: auto; /* Ensures button is always clickable */
+}
+
+.toggle-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Floating Social Icons */
+.floating-social-container {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.floating-social-container .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.floating-social-container .social-icon:hover {
+    transform: scale(1.5);
+}
+
+/* Footer Styles */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.email-subscription {
+    margin-bottom: 10px;
+}
+
+.email-subscription input {
+    padding: 10px;
+    width: 60%;
+    border: none;
+    border-radius: 40px;
+}
+
+.email-subscription button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00aced;
+    color: white;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.email-subscription button:hover {
+    background-color: #007bb5;
+}
