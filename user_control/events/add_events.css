@@ -194,3 +194,55 @@ h2 {
         gap: 10px;
     }
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        margin-top: 133px;
+        gap: 0;
+    }
+
+    .nav-center{
+        left: 160px;
+    }
+
+    .logout-btn{
+        margin-left: 260px;
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        /* position: sticky; */
+        /* align-items: right; */
+        /* align-content: right; */
+        text-align: center;
+    }
+
+    .projects{
+        text-align: center;
+        width: 80px;
+        margin-left: 260px;
+    }
+
+    .container{
+        margin-top: 70px;
+        width: 300px;
+        padding: 17px 30px;
+    }
+
+    .input-row{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+    }
+
+}

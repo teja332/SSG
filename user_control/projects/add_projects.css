@@ -175,7 +175,45 @@ h2 {
 /* Responsive */
 @media (max-width: 500px) {
     .container {
-        width: 90%;
+        width: 80%;
         padding: 25px;
     }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        margin-top: 133px;
+        gap: 0;
+    }
+
+    .nav-center{
+        left: 160px;
+    }
+
+    .logout-btn{
+        margin-left: 260px;
+    }
+
+    .radio-options{
+        gap: 0;
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        /* position: sticky; */
+        /* align-items: right; */
+        /* align-content: right; */
+        text-align: right;
+    }
+
+    .events{
+        width: 80px;
+        margin-left: 260px;
+    }
+
 }

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONNECT</title>
-    <link rel="icon" type="image/png" href="/assets/icons/instagram.png">
-    <link rel="stylesheet" href="/connect/connect.css">
+    <link rel="icon" type="image/png" href="../assets/icons/instagram.png">
+    <link rel="stylesheet" href="connect.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script defer src="/connect/connect.js"></script>
+    <script defer src="connect.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact Gothic|Wendy One|Tilt Warp|Spectral">
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
 </head>
@@ -16,16 +16,16 @@
     <header>
         <nav class="navbar">
             <div class="branding">
-                <a href="/index.html" class="branding-link">
-                    <img class="logo" src="/assets/icons/logo.png" alt="logo">
+                <a href="../index.html" class="branding-link">
+                    <img class="logo" src="../assets/icons/logo.png" alt="logo">
                     <span class="brand-name" style="font-size: 30px;">SHAKTHISREE <BR> GOPALAN</span>
                     </a>
             </div>
             <ul class="menu">
-                <li><a href="/about/about.html">About</a></li>
-                <li><a href="/events/events.html">Events</a></li>
-                <li><a href="/projects/projects.html">Projects</a></li>
-                <li><a href="/connect/connect.html">Connect</a></li>
+                <li><a href="../about/about.html">About</a></li>
+                <li><a href="../events/events.html">Events</a></li>
+                <li><a href="../projects/projects.html">Projects</a></li>
+                <li><a href="connect.html">Connect</a></li>
             </ul>
         </nav>
     </header>
@@ -50,7 +50,7 @@
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" required></textarea>
                     
-                    <button type="submit">Submit</button>
+                    <button type="submit" class="submit">Submit</button>
                 </form>
             </div>
 
@@ -66,44 +66,78 @@
                     <label for="contributeMessage">Contribute:</label>
                     <textarea id="contributeMessage" name="contributeMessage" required></textarea>
                     
-                    <button type="submit">Submit</button>
+                    <button type="submit" class="submit">Submit</button>
                 </form>
             </div>
         </div>
 
         <!-- Image with Contribute Button -->
         <div class="image-container">
-            <img id="toggleImage" src="/assets/images/1357585.png" alt="Form Image" class="form-image">
-            <button id="toggleBtn" class="toggle-btn">Contribute</button>
+            <div class="image-cont">
+                <img id="toggleImage" src="../assets/images/a21.jpg" alt="Form Image" class="form-image">
+            </div>
+            <div class="contribute-btn">
+                <button id="toggleBtn" class="toggle-btn">Contribute</button>
+            </div>
         </div>
     </div>
 
-    <!-- Floating Social Icons -->
-    <div class="floating-social-container">
-        <a href="https://facebook.com" target="_blank" class="social-icon facebook">
-            <lord-icon trigger="hover" src="/assets/icons/facebook-icon.json"></lord-icon>
+        <!-- Floating Social Icons -->
+        <div class="floating-social-container">
+            <a href="https://www.facebook.com/shakthisreeg" target="_blank" class="social-icon facebook">
+                <lord-icon trigger="hover" src="../assets/icons/facebook-icon.json"></lord-icon>
+            </a>
+            <a href="https://x.com/shakthisreeg" target="_blank" class="social-icon twitter">
+                <lord-icon trigger="hover" src="../assets/icons/twitter-icon.json"></lord-icon>
+            </a>
+            <a href="https://www.instagram.com/shakthisreegopalan/" target="_blank" class="social-icon instagram">
+                <lord-icon trigger="hover" src="../assets/icons/instagram-icon.json"></lord-icon>
+            </a>
+            <a href="https://www.youtube.com/@shakthisreegopalan" target="_blank" class="social-icon youtube">
+                <lord-icon trigger="hover" src="../assets/icons/youtube-icon.json"></lord-icon>
+            </a>
+            <a href="https://open.spotify.com/artist/7zAp0JbkavFg2rcMGvANtP" target="_blank" class="social-icon spotify">
+                <lord-icon trigger="hover" src="../assets/icons/spotify.json"></lord-icon>
+            </a>
+        </div>
+
+<!-- Hamburger Menu Button -->
+<div class="hamburger-menu" id="menu-toggle">
+    <div class="bar top"></div>
+    <div class="bar middle"></div>
+    <div class="bar bottom"></div>
+</div>
+
+<!-- Mobile Overlay Menu -->
+<div class="overlay-menu" id="overlay-menu">
+    <ul class="overlay-menu-items">
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../events/events.html">Events</a></li>
+        <li><a href="../projects/projects.html">Projects</a></li>
+        <li><a href="connect.html">Connect</a></li>
+    </ul>
+    <div class="overlay-social-icons">
+        <a href="https://www.facebook.com/shakthisreeg" target="_blank" class="social-icon facebook">
+            <lord-icon trigger="hover" src="../assets/icons/facebook-icon.json"></lord-icon>
         </a>
-        <a href="https://x.com" target="_blank" class="social-icon twitter">
-            <lord-icon trigger="hover" src="/assets/icons/twitter-icon.json"></lord-icon>
+        <a href="https://x.com/shakthisreeg" target="_blank" class="social-icon twitter">
+            <lord-icon trigger="hover" src="../assets/icons/twitter-icon.json"></lord-icon>
         </a>
-        <a href="https://instagram.com" target="_blank" class="social-icon instagram">
-            <lord-icon trigger="hover" src="/assets/icons/instagram-icon.json"></lord-icon>
+        <a href="https://www.instagram.com/shakthisreegopalan/" target="_blank" class="social-icon instagram">
+            <lord-icon trigger="hover" src="../assets/icons/instagram-icon.json"></lord-icon>
         </a>
-        <a href="https://youtube.com" target="_blank" class="social-icon youtube">
-            <lord-icon trigger="hover" src="/assets/icons/youtube-icon.json"></lord-icon>
+        <a href="https://www.youtube.com/@shakthisreegopalan" target="_blank" class="social-icon youtube">
+            <lord-icon trigger="hover" src="../assets/icons/youtube-icon.json"></lord-icon>
         </a>
-        <a href="https://spotify.com" target="_blank" class="social-icon spotify">
-            <lord-icon trigger="hover" src="/assets/icons/spotify.json"></lord-icon>
+        <a href="https://open.spotify.com/artist/7zAp0JbkavFg2rcMGvANtP" target="_blank" class="social-icon spotify">
+            <lord-icon trigger="hover" src="../assets/icons/spotify.json"></lord-icon>
         </a>
     </div>
+</div>
 
     <!-- Footer Section -->
     <footer>
         <div class="footer-content">
-            <form class="email-subscription">
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Connect</button>
-            </form>
             <p>© 2025 Company Name. All rights reserved.</p>
         </div>
     </footer>

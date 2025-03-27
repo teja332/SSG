@@ -150,3 +150,22 @@ body, html {
 .card:hover {
     transform: scale(1.05);
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        margin-top: 133px;
+        gap: 0;
+    }
+
+    .nav-center{
+        left: 160px;
+    }
+
+    .logout-btn{
+        margin-left: 260px;
+    }
+
+}

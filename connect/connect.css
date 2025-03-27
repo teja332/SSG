@@ -104,21 +104,22 @@ body, html {
 .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; /* Align items to the top */
     margin: 120px auto;
     width: 80%;
-    height: 500px;
+    height: auto; /* Allow height to adjust dynamically */
     max-width: 1000px;
     background: rgba(255, 255, 255, 0.6);
     padding: 20px;
     border-radius: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Required for absolute positioning of toggle button */
 }
 
 /* Left Form Section */
 .form-container {
     width: 50%;
-    height: 70%;
+    height: 100%;
 }
 
 /* .buttons {
@@ -182,13 +183,15 @@ body, html {
 
 /* Right Side - Image Section */
 .image-container {
+    display: flex ;
+    flex-direction: column;
     width: 45%;
     position: relative;
 }
 
 .image-container img {
     width: 100%;
-    height: 350px;
+    height: 370px;
     object-fit: cover;
     border-radius: 25px;
 }
@@ -276,3 +279,154 @@ footer {
 .email-subscription button:hover {
     background-color: #007bb5;
 }
+
+/* Hamburger Menu (Bottom Right) */
+.hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 17px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    /* background: black; */
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    z-index: 1003; /* 🆙 Higher than overlay menu */
+}
+
+.hamburger-menu .bar {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 40px;
+    border: solid;
+}
+
+/* Hamburger to Close Transition */
+.hamburger-menu.active .top {
+    transform: rotate(45deg) translate(7px, 11px);
+}
+.hamburger-menu.active .middle {
+    opacity: 0;
+}
+.hamburger-menu.active .bottom {
+    transform: rotate(-45deg) translate(5px, -10px);    
+}
+
+/* Overlay Menu */
+.overlay-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+        background-color: rgba(0, 0, 0, 0.2); /* Transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    color: white;
+    text-align: center;
+    z-index: 1002; /* 🆕 Lower than the hamburger menu */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Menu Items */
+.overlay-menu-items {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+}
+.overlay-menu-items li {
+    margin: 20px 0;
+}
+.overlay-menu-items a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Social Icons in Overlay */
+.overlay-social-icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .branding{
+        padding-right: 80px;
+    }
+
+/* form container */
+    .form-container{
+        width: 220px;
+        align-items: center;
+        justify-content: center;
+        padding-left: 40px;
+    }
+
+
+    /* Remove menu items from navbar */
+    .menu {
+        display: none !important;
+    }
+    /* Center navbar content */
+    .navbar {
+        justify-content: center;
+    }
+    /* Ensure branding stays centered */
+    .navbar .branding {
+        margin: 0 auto;
+    }
+    .menu, .floating-social-container {
+        display: none;
+    }
+    .hamburger-menu {
+        display: flex;
+    }
+    .menu {
+        display: none;
+    }
+
+    /* Remove image container */
+    .image-cont {
+        display: none;
+    }
+
+    /* Move the toggle button below the main form container */
+    .container {
+        flex-direction: column; /* Stack the content vertically */
+        height: auto; /* Allow for dynamic height */
+        position: relative; /* Ensure button is within container */
+        padding-bottom: 60px; /* Added padding for space for the button */
+    }
+
+    /* Move the toggle button below the form */
+    .toggle-btn {
+        position: absolute; /* Absolute positioning within .container */
+        bottom: 20px; /* Ensure it is 20px from the bottom */
+        right: 20px; /* Ensure it is 20px from the right */
+        margin: -100px ;
+    }
+    .submit{
+        margin-left: 10px;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .hamburger-menu {
+        display: none;
+    }
+}
+

@@ -1,19 +1,3 @@
-// document.getElementById('connectBtn').addEventListener('click', function() {
-//     document.getElementById('connectForm').style.display = 'block';
-//     document.getElementById('contributeForm').style.display = 'none';
-//     document.getElementById('connectBtn').classList.add('active');
-//     document.getElementById('contributeBtn').classList.remove('active');
-//     document.getElementById('toggleBtn').innerText = 'Contribute';
-// });
-
-// document.getElementById('contributeBtn').addEventListener('click', function() {
-//     document.getElementById('contributeForm').style.display = 'block';
-//     document.getElementById('connectForm').style.display = 'none';
-//     document.getElementById('contributeBtn').classList.add('active');
-//     document.getElementById('connectBtn').classList.remove('active');
-//     document.getElementById('toggleBtn').innerText = 'Connect';
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
     let contributeForm = document.getElementById('contributeForm');
     let connectForm = document.getElementById('connectForm');
@@ -21,6 +5,22 @@ document.addEventListener("DOMContentLoaded", function () {
     let contributeBtn = document.getElementById('contributeBtn');
     let toggleBtn = document.getElementById('toggleBtn');
     let toggleImage = document.getElementById('toggleImage'); // Image element
+    let container = document.querySelector('.container'); // Get the container div
+    let imageContainer = document.querySelector('.image-container'); // Image container
+
+    // Function to check if it's mobile view
+    function isMobileView() {
+        return window.innerWidth <= 768; // Adjust breakpoint if needed
+    }
+
+    // Function to update background image only on mobile
+    function updateBackgroundImage(imageSrc) {
+        if (isMobileView()) {
+            container.style.backgroundImage = `url('${imageSrc}')`;
+            container.style.backgroundSize = 'cover';
+            container.style.backgroundPosition = 'center';
+        }
+    }
 
     // Ensure the correct initial display state
     connectForm.style.display = 'block';
@@ -33,14 +33,16 @@ document.addEventListener("DOMContentLoaded", function () {
             connectBtn.classList.remove('active');
             contributeBtn.classList.add('active');
             toggleBtn.innerText = 'Connect';
-            toggleImage.src = '/assets/images/sample.jpeg'; // Change to connect image
+            toggleImage.src = '../assets/images/c1.jpg'; // Change to connect image
+            updateBackgroundImage(toggleImage.src);
         } else {
             connectForm.style.display = 'block';
             contributeForm.style.display = 'none';
             connectBtn.classList.add('active');
             contributeBtn.classList.remove('active');
             toggleBtn.innerText = 'Contribute';
-            toggleImage.src ='/assets/images/sample1.jpeg'; // Change to contribute image
+            toggleImage.src = '../assets/images/c2.heic'; // Change to contribute image
+            updateBackgroundImage(toggleImage.src);
         }
     });
 
@@ -54,4 +56,33 @@ document.addEventListener("DOMContentLoaded", function () {
         // Ensure it recognizes clicks immediately
         contributeBtn.focus();
     }
+
+    // Hamburger Menu Functionality
+    const menuToggle = document.getElementById('menu-toggle');
+    const overlayMenu = document.getElementById('overlay-menu');
+
+    menuToggle.addEventListener('click', () => {
+        const isOpen = overlayMenu.style.display === 'flex';
+        overlayMenu.style.display = isOpen ? 'none' : 'flex';
+        menuToggle.classList.toggle('active');
+    });
+
+    // Set initial background image only for mobile view
+    updateBackgroundImage(toggleImage.src);
+
+    // Update background on window resize
+    window.addEventListener("resize", function () {
+        updateBackgroundImage(toggleImage.src);
+
+        // Check if it has become mobile and adjust layout
+        if (isMobileView()) {
+            if (imageContainer) {
+                imageContainer.style.display = 'none'; // Hide the image container on mobile
+            }
+        } else {
+            if (imageContainer) {
+                imageContainer.style.display = 'block'; // Show the image container on desktop
+            }
+        }
+    });
 });

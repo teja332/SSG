@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/assets/icons/logo.png">
+    <link rel="icon" type="image/png" href="assets/icons/logo.png">
     <title>SHAKTI SREE GOPALAN</title>
     <link rel="stylesheet" href="index.css">
     <script defer src="index.js"></script>
@@ -15,16 +15,16 @@
     <header>
         <nav class="navbar">
             <div class="branding">
-                <a href="/index.html" class="branding-link">
-                    <img class="logo" src="/assets/icons/logo.png" alt="logo">
+                <a href="index.html" class="branding-link">
+                    <img class="logo" src="assets/icons/logo.png" alt="logo">
                     <span class="brand-name" style="font-size: 30px;">SHAKTHISREE <BR> GOPALAN</span>
-                    </a>
+                </a>
             </div>
             <ul class="menu">
-                <li><a href="/about/about.html">About</a></li>
-                <li><a href="/events/events.html">Events</a></li>
-                <li><a href="/projects/projects.html">Projects</a></li>
-                <li><a href="/connect/connect.html">Connect</a></li>
+                <li><a href="about/about.html">About</a></li>
+                <li><a href="events/events.html">Events</a></li>
+                <li><a href="projects/projects.html">Projects</a></li>
+                <li><a href="connect/connect.html">Connect</a></li>
             </ul>
         </nav>
     </header>
@@ -33,49 +33,75 @@
     <main>
         <div class="photo-slideshow-container">
             <div class="slideshow">
-                <img src="/assets/images/1318497.jpeg" alt="Photo 1" class="slide">
-                <img src="/assets/images/1357585.png" alt="Photo 2" class="slide">
-                <img src="/assets/images/1357587.png" alt="Photo 3" class="slide">
-                <img src="/assets/images/desert-8041046_1280.webp" alt="Photo 4" class="slide">
-                <img src="/assets/images/facade-9182972_1280.webp" alt="Photo 5" class="slide">
-                <img src="/assets/images/Screenshot 2024-02-16 234552.png" alt="Photo 6" class="slide">
-                <img src="/assets/images/Screenshot 2024-02-19 234652.png" alt="Photo 7" class="slide">
-                <img src="/assets/images/Screenshot 2024-04-01 232714.png" alt="Photo 8" class="slide">
-                <img src="/assets/images/Screenshot 2024-07-03 232342.png" alt="Photo 9" class="slide">
-                <img src="/assets/images/wallhaven-49wge8.jpg" alt="Photo 10" class="slide">
-                <img src="/assets/images/wallhaven-8o83e2.jpg" alt="Photo 11" class="slide">
-                <img src="/assets/images/wallhaven-gp6p5l.png" alt="Photo 12" class="slide">
-                <img src="/assets/images/wallhaven-gpezod.jpg" alt="Photo 13 " class="slide">
+                <img src="assets/images/w1.jpg" alt="Photo 1" class="slide">
+                <img src="assets/images/w2.jpg" alt="Photo 2" class="slide">
+                <img src="assets/images/w3.jpg" alt="Photo 3" class="slide">
+                <img src="assets/images/w4.jpg" alt="Photo 4" class="slide">
+                <img src="assets/images/w5.jpeg" alt="Photo 5" class="slide">
+                <img src="assets/images/w6.jpg" alt="Photo 6" class="slide">
+                <img src="assets/images/w7.jpg" alt="Photo 7" class="slide">
+                <img src="assets/images/w8.jpg" alt="Photo 8" class="slide">
+                <img src="assets/images/w9.jpg" alt="Photo 9" class="slide">
             </div>
         </div>
     </main>
 
     <!-- Floating Social Icons -->
     <div class="floating-social-container">
-        <a href="https://facebook.com" target="_blank" class="social-icon facebook">
-            <lord-icon trigger="hover" src="/assets/icons/facebook-icon.json"></lord-icon>
+        <a href="https://www.facebook.com/shakthisreeg" target="_blank" class="social-icon facebook">
+            <lord-icon trigger="hover" src="assets/icons/facebook-icon.json"></lord-icon>
         </a>
-        <a href="https://x.com" target="_blank" class="social-icon twitter">
-            <lord-icon trigger="hover" src="/assets/icons/twitter-icon.json"></lord-icon>
+        <a href="https://x.com/shakthisreeg" target="_blank" class="social-icon twitter">
+            <lord-icon trigger="hover" src="assets/icons/twitter-icon.json"></lord-icon>
         </a>
-        <a href="https://instagram.com" target="_blank" class="social-icon instagram">
-            <lord-icon trigger="hover" src="/assets/icons/instagram-icon.json"></lord-icon>
+        <a href="https://www.instagram.com/shakthisreegopalan/" target="_blank" class="social-icon instagram">
+            <lord-icon trigger="hover" src="assets/icons/instagram-icon.json"></lord-icon>
         </a>
-        <a href="https://youtube.com" target="_blank" class="social-icon youtube">
-            <lord-icon trigger="hover" src="/assets/icons/youtube-icon.json"></lord-icon>
+        <a href="https://www.youtube.com/@shakthisreegopalan" target="_blank" class="social-icon youtube">
+            <lord-icon trigger="hover" src="assets/icons/youtube-icon.json"></lord-icon>
         </a>
-        <a href="https://spotify.com" target="_blank" class="social-icon spotify">
-            <lord-icon trigger="hover" src="/assets/icons/spotify.json"></lord-icon>
+        <a href="https://open.spotify.com/artist/7zAp0JbkavFg2rcMGvANtP" target="_blank" class="social-icon spotify">
+            <lord-icon trigger="hover" src="assets/icons/spotify.json"></lord-icon>
         </a>
     </div>
+
+<!-- Hamburger Menu Button -->
+<div class="hamburger-menu" id="menu-toggle">
+    <div class="bar top"></div>
+    <div class="bar middle"></div>
+    <div class="bar bottom"></div>
+</div>
+
+<!-- Mobile Overlay Menu -->
+<div class="overlay-menu" id="overlay-menu">
+    <ul class="overlay-menu-items">
+        <li><a href="about/about.html">About</a></li>
+        <li><a href="events/events.html">Events</a></li>
+        <li><a href="projects/projects.html">Projects</a></li>
+        <li><a href="connect/connect.html">Connect</a></li>
+    </ul>
+    <div class="overlay-social-icons">
+        <a href="https://www.facebook.com/shakthisreeg" target="_blank" class="social-icon facebook">
+            <lord-icon trigger="hover" src="assets/icons/facebook-icon.json"></lord-icon>
+        </a>
+        <a href="https://x.com/shakthisreeg" target="_blank" class="social-icon twitter">
+            <lord-icon trigger="hover" src="assets/icons/twitter-icon.json"></lord-icon>
+        </a>
+        <a href="https://www.instagram.com/shakthisreegopalan/" target="_blank" class="social-icon instagram">
+            <lord-icon trigger="hover" src="assets/icons/instagram-icon.json"></lord-icon>
+        </a>
+        <a href="https://www.youtube.com/@shakthisreegopalan" target="_blank" class="social-icon youtube">
+            <lord-icon trigger="hover" src="assets/icons/youtube-icon.json"></lord-icon>
+        </a>
+        <a href="https://open.spotify.com/artist/7zAp0JbkavFg2rcMGvANtP" target="_blank" class="social-icon spotify">
+            <lord-icon trigger="hover" src="assets/icons/spotify.json"></lord-icon>
+        </a>
+    </div>
+</div>
 
     <!-- Footer Section -->
     <footer>
         <div class="footer-content">
-            <form class="email-subscription">
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Connect</button>
-            </form>
             <p>© 2025 Company Name. All rights reserved.</p>
         </div>
     </footer>

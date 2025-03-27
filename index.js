@@ -18,4 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize the slideshow
     showSlide(currentIndex);
     setInterval(nextSlide, 5000); // Change slide every 3 seconds
+
+    // Hamburger Menu Functionality
+    const menuToggle = document.getElementById('menu-toggle');
+    const overlayMenu = document.getElementById('overlay-menu');
+
+    menuToggle.addEventListener('click', () => {
+        const isOpen = overlayMenu.style.display === 'flex';
+        overlayMenu.style.display = isOpen ? 'none' : 'flex';
+        menuToggle.classList.toggle('active');
+    });
+
 });
